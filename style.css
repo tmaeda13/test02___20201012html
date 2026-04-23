@@ -11,3 +11,8 @@ body{
 div.section{
   display:flex;
 }
+
+header{
+  width:100%;
+  display:flex;
+}
