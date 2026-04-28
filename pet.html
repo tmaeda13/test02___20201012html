@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〇〇動物病院 | 大切な家族の健康を守る</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1558944351-cb7e7c9b36c5") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cta {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* スクロールフェード */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>〇〇動物病院</h2>
+</header>
+
+<section class="hero">
+  <h1>大切なペットに、安心の医療を</h1>
+  <p>犬・猫・小動物の診療に対応しています</p>
+  <a href="#contact" class="btn">予約する</a>
+</section>
+
+<section class="fade">
+  <h2>当院の特徴</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>丁寧な診療</h3>
+      <p>一匹一匹に寄り添った診療を行います。</p>
+    </div>
+    <div class="feature">
+      <h3>最新設備</h3>
+      <p>最新の医療機器を導入しています。</p>
+    </div>
+    <div class="feature">
+      <h3>安心のサポート</h3>
+      <p>飼い主様にも分かりやすく説明します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <h2>診療内容</h2>
+  <ul>
+    <li>一般診療</li>
+    <li>予防接種</li>
+    <li>健康診断</li>
+    <li>手術対応</li>
+  </ul>
+</section>
+
+<section class="cta fade" id="contact">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>お気軽にご相談ください</p>
+  <a href="#" class="btn">電話で予約</a>
+</section>
+
+<footer>
+  <p>© 〇〇動物病院</p>
+</footer>
+
+<script>
+// スクロールでフェードイン
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < trigger) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
