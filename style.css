@@ -13,6 +13,7 @@ body{
 div.color{
   color:#d1d;
   padding:3rem;
+  max-width:100%;
 }
 
 div.section{
